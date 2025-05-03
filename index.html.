@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>AXE Token - Adicione à sua carteira</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; margin-top:60px;">
+  <img src="https://raw.githubusercontent.com/AXE-token/axetoken-asset/main/blockchains/smartchain/assets/0x1bC4E2F5e1984b1032F9241815E145100272D21E/logo.png" alt="AXE Token" width="120">
+  <h2>Adicionar AXE Token à sua carteira</h2>
+  <p>Clique no botão abaixo para adicionar o AXE Token à sua carteira (MetaMask ou Trust Wallet via navegador):</p>
+  <button style="padding:12px 20px; font-size:16px; cursor:pointer;" onclick="addToken()">Adicionar AXE à carteira</button>
+
+  <script>
+    async function addToken() {
+      try {
+        const foiAdicionado = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20', // Mesmo sendo BSC, o padrão aqui é ERC20
+            options: {
+              address: '0x1bC4E2F5e1984b1032F9241815E145100272D21E',
+              symbol: 'AXE',
+              decimals: 18,
+              image: 'https://raw.githubusercontent.com/AXE-to
